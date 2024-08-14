@@ -1,0 +1,426 @@
+.container-fluid {
+  padding: 0;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .header-image {
+    height: auto;
+  }
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99.5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .overlay-image {
+    display: none;
+  }
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: 3;
+  color: white;
+  max-width: 600px;
+  white-space: pre-line;
+  /* this line is used to brek the sentece when \n is used in JSON */
+}
+.text-container h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.text-container p {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .text-container {
+    top: 20%;
+    left: 20px;
+    transform: translateY(-40%);
+  }
+  .text-container h2 {
+    font-size: 1.75rem;
+  }
+  .text-container p {
+    font-size: 0.9rem;
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: none;
+}
+.btn-secondary img {
+  height: 30px;
+}
+
+.navbar-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  padding: 10px 100px;
+  background: linear-gradient(to bottom, rgba(17, 50, 78, 0.6) 0%, rgba(28, 61, 89, 0.5) 60%, rgba(90, 90, 90, 0.5) 100%);
+}
+@media (max-width: 768px) {
+  .navbar-custom {
+    background: none;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+.navbar-custom .navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .navbar-custom .navbar-collapse {
+    display: none;
+  }
+  .navbar-custom .navbar-collapse.show {
+    display: block;
+  }
+}
+.navbar-custom select {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+.navbar-custom select:active {
+  border: none;
+}
+.navbar-custom .navbar-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.navbar-custom .navbar-nav .nav-link {
+  margin-left: 15px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .navbar-custom {
+    padding: 10px 20px;
+  }
+  .navbar-custom .navbar-collapse {
+    justify-content: center;
+  }
+  .navbar-custom .navbar-nav {
+    display: block;
+    text-align: center;
+  }
+  .navbar-custom .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .navbar-custom .navbar-toggler {
+    border: none;
+  }
+}
+
+.about {
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -7px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #ffffff 65%, #f5f5f5 35%);
+}
+.about .title {
+  padding-top: 50px;
+}
+.about h2 {
+  color: #0764b1;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+.about hr {
+  margin-top: 2px;
+  width: 100px;
+  height: 5px;
+  border: none;
+  background-color: #676767;
+}
+.about .about-para {
+  font-size: 1.5rem;
+  padding: 20px 280px;
+  line-height: 60px;
+  color: #676767;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .about .about-para {
+    font-size: 0.9;
+    padding: 20px 0;
+    line-height: 40px;
+  }
+}
+
+.swiper-container {
+  margin-top: 60px;
+  margin-bottom: 70px;
+  height: 500px;
+  overflow: hidden;
+}
+.swiper-container .swiper-wrapper .news-slider {
+  width: 100px;
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 104, 125, 0.2);
+}
+.swiper-container .swiper-wrapper .news-slider img {
+  width: 100%;
+  padding: 0;
+}
+.swiper-container .swiper-wrapper .news-slider p {
+  padding: 20px !important;
+  text-align: left;
+}
+.swiper-container .swiper-wrapper .news-slider .read-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 20px;
+  color: #0764b1;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+.swiper-container .swiper-wrapper .news-slider .read-btn i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.swiper-pagination {
+  padding-bottom: 40px;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 50px;
+  height: 10px;
+  background-color: hwb(209 63% 0%);
+  border-radius: 0;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #0764b1;
+}
+
+.testimonials {
+  text-align: center;
+  position: relative;
+  max-width: 800px;
+  max-height: 500px;
+  margin: auto;
+}
+.testimonials .title {
+  padding-top: 50px;
+}
+.testimonials h2 {
+  color: #0764b1;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+.testimonials hr {
+  margin-top: 2px;
+  width: 100px;
+  height: 5px;
+  border: none;
+  background-color: #676767;
+}
+.testimonials .testimonial-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.testimonials .testimonial-box .quote-right,
+.testimonials .testimonial-box .quote-left {
+  width: 20px;
+  height: 20px;
+}
+.testimonials .testimonial-box .quote-right {
+  align-self: flex-end;
+}
+.testimonials .testimonial-box .quote-left {
+  align-self: flex-start;
+  transform: scaleX(-1);
+}
+.testimonials .testimonial-box p {
+  font-size: 1.2rem;
+  padding: 0 80px;
+  line-height: 60px;
+  color: #676767;
+  font-weight: 300;
+}
+.testimonials .testimonial-box .testimonial-name {
+  color: #0764b1;
+  padding-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.testimonials .testimonial-box .testimonial-quote {
+  color: #676767;
+  font-weight: 300;
+}
+.testimonials .custom-swiper-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+.testimonials .custom-swiper-button.custom-next {
+  right: -150px;
+}
+.testimonials .custom-swiper-button.custom-prev {
+  left: -150px;
+}
+.testimonials .custom-swiper-button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .testimonials {
+    width: 100px;
+    max-height: 700px;
+  }
+  .testimonials .quote-right,
+  .testimonials .quote-left {
+    width: 10px;
+    height: 10px;
+  }
+  .testimonials p {
+    font-size: 1.2rem;
+    padding: 0;
+    line-height: 10px;
+    color: #676767;
+    font-weight: 300;
+  }
+}
+
+.contact {
+  text-align: center;
+  position: relative;
+}
+.contact .title {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.contact h2 {
+  color: #0764b1;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+.contact hr {
+  margin-top: 2px;
+  width: 100px;
+  height: 5px;
+  border: none;
+  background-color: #676767;
+}
+.contact .map-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+.contact #map {
+  height: 100%;
+  width: 100%;
+}
+.contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 36, 36, 0.5);
+  pointer-events: none;
+}
+
+.footer-section {
+  padding: 50px 100px;
+  background-color: #0764b1;
+  color: #ffffff;
+}
+.footer-section .col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer-section .col .comp-logo {
+  display: flex;
+  gap: 20px;
+}
+.footer-section .col .comp-logo h3 {
+  font-weight: bold;
+  margin: 0;
+}
+.footer-section .col .comp-logo .footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-section .col .comp-logo .footer-details a {
+  margin: 0;
+  font-weight: 200;
+  color: #ffffff;
+  cursor: pointer;
+}
+.footer-section .col p {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 10px;
+  }
+}
+
+.col-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+.col-3 .footer-icons .social-icons {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.col-3 .footer-icons .socials img {
+  height: 40px;
+}
+.col-3 .stay-connected {
+  font-weight: bold;
+}
+.col-3 .publish {
+  font-weight: 200;
+}/*# sourceMappingURL=styles.css.map */
